@@ -19,8 +19,6 @@ public class Main {
 //        Transport transport3 = context.getBean("transport3", Pickup.class);
 //        System.out.println(transport3);
 
-//        Transport transport1 = context.getBean("driver1", Car.class);
-//        System.out.println(transport1);
 
         Driver driver1 = context.getBean("driver1", Driver.class);
         System.out.println(driver1);
