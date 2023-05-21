@@ -18,7 +18,6 @@ public class Main {
         Transport pickup = context.getBean("pickup", Pickup.class);
         System.out.println(pickup);
 
-
         Driver carDriver = context.getBean("carDriver", Driver.class);
         System.out.println(carDriver);
 
