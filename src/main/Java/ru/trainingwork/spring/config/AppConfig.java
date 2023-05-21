@@ -9,33 +9,28 @@ import ru.trainingwork.spring.profiles.*;
 
 @Configuration
 public class AppConfig {
-    @Bean("transport1")
-    @Primary
+    @Bean("car")
     public Car getCarBean () {
         return new Car("Audi", BodyType.CAR);
     }
-    @Bean("transport2")
+    @Bean("bus")
     public Bus getBusBean () {
         return new Bus("Ikarus", BodyType.BUS);
     }
-    @Bean("transport3")
+    @Bean("pickup")
     public Pickup getPickupBean () {
         return new Pickup("UAZ", BodyType.PICKUP);
     }
-
-    @Bean("driver1")
-    @Scope(scopeName = "prototype")
-    public Driver driver1(){
+    @Bean("carDriver")
+    public Driver getCarDriverBean(){
         return new Driver("Alex", getCarBean());
     }
-    @Bean("driver2")
-    @Scope(scopeName = "prototype")
-    public Driver driver2() {
-        return new Driver("Max", getBusBean());
+    @Bean("busDriver")
+    public Driver getBusDriverBean() {
+        return new Driver("Max",getBusBean());
     }
-    @Bean("driver3")
-    @Scope(scopeName = "prototype")
-    public Driver driver3 () {
+    @Bean("pickupDriver")
+    public Driver getPickupDriverBean () {
         return new Driver("Gene", getPickupBean());
     }
 

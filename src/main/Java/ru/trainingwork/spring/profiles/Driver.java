@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Driver {
     private String name;
-    @Autowired
     private Transport transport;
 
     public Driver(String name, Transport transport) {
